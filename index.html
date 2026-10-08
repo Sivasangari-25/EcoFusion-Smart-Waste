@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EcoFusion | Smart Waste Management</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                🌱 EcoFusion
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+
+            <button id="themeButton" class="theme-btn">
+                🌙
+            </button>
+
+        </nav>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <span class="badge">SMART WASTE TECHNOLOGY</span>
+
+            <h1>
+                Smart Waste Management
+                <span>for a Cleaner Future</span>
+            </h1>
+
+            <p>
+                EcoFusion is a smart waste management system that helps
+                monitor waste levels, separate waste and promote
+                sustainable waste processing.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#dashboard" class="primary-btn">
+                    View Dashboard
+                </a>
+
+                <a href="#features" class="secondary-btn">
+                    Explore Features
+                </a>
+            </div>
+
+        </div>
+
+        <div class="hero-image">
+
+            <div class="smart-bin">
+
+                <div class="bin-lid"></div>
+
+                <div class="bin-body">
+
+                    <div class="bin-screen">
+                        <span>SMART</span>
+                        <strong>BIN</strong>
+                    </div>
+
+                    <div class="bin-light"></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Statistics -->
+    <section class="statistics">
+
+        <div class="stat-card">
+            <div class="stat-icon">🗑️</div>
+            <h3 id="totalWaste">125</h3>
+            <p>Total Waste Collected (kg)</p>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-icon">♻️</div>
+            <h3 id="recycledWaste">78</h3>
+            <p>Recyclable Waste (kg)</p>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-icon">🌱</div>
+            <h3 id="fertilizerWaste">47</h3>
+            <p>Organic Waste (kg)</p>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-icon">🌍</div>
+            <h3>92%</h3>
+            <p>Eco Efficiency</p>
+        </div>
+
+    </section>
+
+
+    <!-- Dashboard -->
+    <section id="dashboard" class="section">
+
+        <div class="section-title">
+
+            <span>DASHBOARD</span>
+
+            <h2>Live Waste Monitoring</h2>
+
+            <p>
+                Monitor the current status of smart waste collection bins.
+            </p>
+
+        </div>
+
+
+        <div class="dashboard-grid">
+
+            <!-- Biodegradable -->
+            <div class="bin-card">
+
+                <div class="card-header">
+
+                    <div>
+                        <h3>🌱 Biodegradable Bin</h3>
+                        <p>Organic waste</p>
+                    </div>
+
+                    <span class="status online">
+                        ● Online
+                    </span>
+
+                </div>
+
+                <div class="progress-container">
+
+                    <div class="progress-info">
+                        <span>Waste Level</span>
+                        <strong id="organicValue">65%</strong>
+                    </div>
+
+                    <div class="progress-bar">
+                        <div
+                            class="progress organic"
+                            id="organicProgress"
+                            style="width:65%">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="bin-details">
+
+                    <div>
+                        <span>Capacity</span>
+                        <strong>100 kg</strong>
+                    </div>
+
+                    <div>
+                        <span>Current</span>
+                        <strong id="organicKg">65 kg</strong>
+                    </div>
+
+                    <div>
+                        <span>Processing</span>
+                        <strong>Fertilizer</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Non Biodegradable -->
+            <div class="bin-card">
+
+                <div class="card-header">
+
+                    <div>
+                        <h3>♻️ Non-Biodegradable Bin</h3>
+                        <p>Plastic & recyclable waste</p>
+                    </div>
+
+                    <span class="status online">
+                        ● Online
+                    </span>
+
+                </div>
+
+                <div class="progress-container">
+
+                    <div class="progress-info">
+                        <span>Waste Level</span>
+                        <strong id="plasticValue">42%</strong>
+                    </div>
+
+                    <div class="progress-bar">
+                        <div
+                            class="progress plastic"
+                            id="plasticProgress"
+                            style="width:42%">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="bin-details">
+
+                    <div>
+                        <span>Capacity</span>
+                        <strong>100 kg</strong>
+                    </div>
+
+                    <div>
+                        <span>Current</span>
+                        <strong id="plasticKg">42 kg</strong>
+                    </div>
+
+                    <div>
+                        <span>Processing</span>
+                        <strong>Recycling</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Controls -->
+        <div class="controls">
+
+            <h3>Demo Controls</h3>
+
+            <p>
+                Use the buttons below to simulate smart-bin monitoring.
+            </p>
+
+            <div class="control-buttons">
+
+                <button onclick="addOrganicWaste()">
+                    + Add Organic Waste
+                </button>
+
+                <button onclick="addPlasticWaste()">
+                    + Add Plastic Waste
+                </button>
+
+                <button onclick="emptyBins()">
+                    🗑️ Empty Bins
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Features -->
+    <section id="features" class="section features-section">
+
+        <div class="section-title">
+
+            <span>FEATURES</span>
+
+            <h2>How EcoFusion Works</h2>
+
+            <p>
+                A simple smart system for efficient waste management.
+            </p>
+
+        </div>
+
+
+        <div class="features-grid">
+
+            <div class="feature-card">
+
+                <div class="feature-icon">📡</div>
+
+                <h3>Smart Monitoring</h3>
+
+                <p>
+                    Sensors monitor the waste level inside the bin
+                    and provide real-time status information.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">♻️</div>
+
+                <h3>Plastic Recycling</h3>
+
+                <p>
+                    Non-biodegradable waste can be collected and
+                    processed for recycling and reuse.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">🌱</div>
+
+                <h3>Organic Fertilizer</h3>
+
+                <p>
+                    Organic waste can be processed into natural
+                    fertilizer for agricultural applications.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">☀️</div>
+
+                <h3>Solar Powered</h3>
+
+                <p>
+                    Solar energy can support the smart monitoring
+                    system and reduce external power requirements.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">📱</div>
+
+                <h3>Digital Dashboard</h3>
+
+                <p>
+                    A dashboard provides a simple interface to
+                    monitor bin conditions and waste levels.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">🌍</div>
+
+                <h3>Eco Friendly</h3>
+
+                <p>
+                    The system promotes responsible waste disposal
+                    and supports a cleaner environment.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Process -->
+    <section class="section process-section">
+
+        <div class="section-title">
+
+            <span>PROCESS</span>
+
+            <h2>Waste Management Flow</h2>
+
+        </div>
+
+
+        <div class="process">
+
+            <div class="process-step">
+
+                <div class="step-number">1</div>
+
+                <h3>Collect</h3>
+
+                <p>
+                    Waste is deposited into the smart bin.
+                </p>
+
+            </div>
+
+
+            <div class="process-line"></div>
+
+
+            <div class="process-step">
+
+                <div class="step-number">2</div>
+
+                <h3>Detect</h3>
+
+                <p>
+                    Sensors detect the type and level of waste.
+                </p>
+
+            </div>
+
+
+            <div class="process-line"></div>
+
+
+            <div class="process-step">
+
+                <div class="step-number">3</div>
+
+                <h3>Process</h3>
+
+                <p>
+                    Organic and recyclable waste follow separate
+                    processing methods.
+                </p>
+
+            </div>
+
+
+            <div class="process-line"></div>
+
+
+            <div class="process-step">
+
+                <div class="step-number">4</div>
+
+                <h3>Reuse</h3>
+
+                <p>
+                    Recyclable materials and fertilizer are reused.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- About -->
+    <section id="about" class="about-section">
+
+        <div class="about-content">
+
+            <span>ABOUT ECOFUSION</span>
+
+            <h2>Smart Waste. Smart Future.</h2>
+
+            <p>
+                EcoFusion is a concept for an intelligent waste
+                management system designed to improve waste
+                segregation, monitoring and sustainable processing.
+            </p>
+
+            <p>
+                The system combines smart sensors, renewable energy,
+                digital monitoring and waste-processing techniques
+                to create an environmentally responsible solution.
+            </p>
+
+            <div class="about-points">
+
+                <div>✓ Smart waste monitoring</div>
+                <div>✓ Waste segregation</div>
+                <div>✓ Recycling support</div>
+                <div>✓ Organic fertilizer generation</div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+                <h3>🌱 EcoFusion</h3>
+
+                <p>
+                    Smart Waste, Smart Future.
+                </p>
+            </div>
+
+            <div>
+                <p>
+                    © 2026 EcoFusion Smart Waste Management
+                </p>
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
